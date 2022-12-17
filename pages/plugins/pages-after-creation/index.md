@@ -22,10 +22,7 @@ class TitleAppender extends Plugin {
 		$newTitle = 'Summer: '.$currentTitle;
 
 		global $pages;
-		$pages->edit(array(
-				'key'=>$key,
-				'title'=>$newTitle
-		));
+		$pages->setField($key,'title', $newTitle);
 	}
 
 }
